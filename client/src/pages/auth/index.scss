@@ -1,0 +1,51 @@
+@import 'scss/index.scss';
+
+.auth{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background: $background-gray-light;
+  width: 100%;
+  .image{
+    width: 250px;
+    
+  }
+
+  .container-form{
+    width: 400px;
+    background: $background-light;
+    padding: 20px 50px;
+    border-radius: 10px;
+    margin:50px 20px 10px 20px;
+    border:1px solid $border-gray;
+    box-shadow: -2px 0px 5px 3px rgba(0,0,0,0.1);
+
+    @media screen and (max-width:500px) {
+      width: 370px;
+    }
+  }
+
+  .change-form{
+    margin-top: 10px;
+    width: 400px;
+    padding: 20px 50px;
+    background: $background-light;
+    border:1px solid $border-gray;
+ 
+    text-align: center;
+    border-radius: 10px; 
+    span{
+      color:$action;
+      font-weight: bold;
+      margin-left: 10px;
+      &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+}
+

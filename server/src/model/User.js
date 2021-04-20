@@ -53,7 +53,7 @@ userSchema.statics.encryptPassword = async (password)=>{
    return await bcrypt.hash(password, salt)
 }
 
-userSchema.statics.comparePassword = async function(password){
+userSchema.methods.comparePassword = async function(password){
   return await bcrypt.compare(password, this.password)
 }
 

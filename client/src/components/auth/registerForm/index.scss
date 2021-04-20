@@ -1,0 +1,15 @@
+@import 'scss/index.scss';
+
+.register-form-title{
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: 'RocknRoll One';
+}
+
+.register-form {
+  input {
+    background: #f9f9f9 !important;
+    padding: 10px 15px  !important;
+  }
+}

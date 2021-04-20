@@ -1,26 +1,13 @@
-const {registerUser} = require('../controller/UserController')
+const userController = require('../controller/UserController')
 
-const resolvers ={
+const resolvers = {
    Query:{
-     hello:()=>{
-       return "hola mundo desde graphql"
-     },
-     getOneUser:async (_,{id})=>{
-      const user = await User.findOne({_id:id})
-      return user
-    },
-     getUsers:async ()=>{
-       try {
-           const users = await User.find()
-           return users
-       } catch (error) {
-           console.log(error)
-       }
-     }
+    getOneUser: (_,{id} ) => userController.getOneUser(id),
+    getUsers: () => userController.getUsers()
    },
-
    Mutation:{
-     register:async (_, {input})=>registerUser(input)
+     register: (_, {input} ) => userController.registerUser(input),
+     login: (_,{input}) => userController.login(input)
    } 
 }
 
